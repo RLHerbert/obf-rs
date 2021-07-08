@@ -2,6 +2,11 @@
 name = "obf-rs"
 version = "0.1.0"
 edition = "2018"
+repository = "https://github.com/RLHerbert/obf-rs/"
+license = "MIT"
+description = "An implementation of the Open Bracket Format"
+keywords = ["sports", "esports", "tournament", "bracket", "obf"]
+# categories = ["parser-implementations"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
