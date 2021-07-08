@@ -5,90 +5,90 @@ use std::collections::HashMap;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Tournament {
-    event: Event,
-    sets: Vec<Set>,
-    entrants: Vec<Entrant>,
+    pub event: Event,
+    pub sets: Vec<Set>,
+    pub entrants: Vec<Entrant>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Event {
-    name: String,
-    date: Option<String>,
-    game_name: Option<String>,
-    tournament_structure: Option<String>,
-    phases: Option<Vec<Phase>>,
-    ruleset: Option<String>,
-    origin_u_r_l: Option<String>,
-    number_entrants: Option<u32>,
-    other: Option<HashMap<String, String>>,
+    pub name: String,
+    pub date: Option<String>,
+    pub game_name: Option<String>,
+    pub tournament_structure: Option<String>,
+    pub phases: Option<Vec<Phase>>,
+    pub ruleset: Option<String>,
+    pub origin_u_r_l: Option<String>,
+    pub number_entrants: Option<u32>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Entrant {
-    entrant_i_d: String,
-    entrant_tag: Option<String>,
-    initial_seed: Option<u32>,
-    final_placement: Option<u32>,
-    personal_information: Option<PersonalInformation>,
-    other: Option<HashMap<String, String>>,
+    pub entrant_i_d: String,
+    pub entrant_tag: Option<String>,
+    pub initial_seed: Option<u32>,
+    pub final_placement: Option<u32>,
+    pub personal_information: Option<PersonalInformation>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct PersonalInformation {
-    name: Option<String>,
-    country: Option<String>,
-    other: Option<HashMap<String, String>>,
+    pub name: Option<String>,
+    pub country: Option<String>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Set {
-    set_i_d: String,
-    entrant_1_i_d: Option<String>,
-    entrant_2_i_d: Option<String>,
-    status: Option<Status>,
-    entrant_1_result: Option<EntrantResult>,
-    entrant_2_result: Option<EntrantResult>,
-    entrant_1_score: Option<i32>,
-    entrant_2_score: Option<i32>,
-    winner_next_set_i_d: Option<String>,
-    loser_next_set_i_d: Option<String>,
-    entrant_1_prev_set_i_d: Option<String>,
-    entrant_2_prev_set_i_d: Option<String>,
-    set_format: Option<String>,
-    phase_i_d: Option<String>,
-    round_i_d: Option<String>,
-    games: Option<Vec<Game>>,
-    other: Option<HashMap<String, String>>,
+    pub set_i_d: String,
+    pub entrant_1_i_d: Option<String>,
+    pub entrant_2_i_d: Option<String>,
+    pub status: Option<Status>,
+    pub entrant_1_result: Option<EntrantResult>,
+    pub entrant_2_result: Option<EntrantResult>,
+    pub entrant_1_score: Option<i32>,
+    pub entrant_2_score: Option<i32>,
+    pub winner_next_set_i_d: Option<String>,
+    pub loser_next_set_i_d: Option<String>,
+    pub entrant_1_prev_set_i_d: Option<String>,
+    pub entrant_2_prev_set_i_d: Option<String>,
+    pub set_format: Option<String>,
+    pub phase_i_d: Option<String>,
+    pub round_i_d: Option<String>,
+    pub games: Option<Vec<Game>>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Game {
-    game_number: u32,
-    entrant_1_character: Option<String>,
-    entrant_2_character: Option<String>,
-    stage: Option<String>,
-    entrant_1_result: Option<EntrantResult>,
-    entrant_2_result: Option<EntrantResult>,
-    other: Option<HashMap<String, String>>,
+    pub game_number: u32,
+    pub entrant_1_character: Option<String>,
+    pub entrant_2_character: Option<String>,
+    pub stage: Option<String>,
+    pub entrant_1_result: Option<EntrantResult>,
+    pub entrant_2_result: Option<EntrantResult>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Phase {
-    phase_i_d: String,
-    phase_structure: Option<String>,
-    other: Option<HashMap<String, String>>,
+    pub phase_i_d: String,
+    pub phase_structure: Option<String>,
+    pub other: Option<HashMap<String, String>>,
 }
 
 // #[derive(Serialize, Deserialize)]
